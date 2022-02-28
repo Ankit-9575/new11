@@ -10,6 +10,7 @@ pipeline {
         stage('git') {
             steps {
              git 'https://github.com/Ankit-9575/new11.git'
+                sh 'echo "this is from master branch"'
         }
     }
     }
