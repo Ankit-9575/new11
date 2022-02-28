@@ -16,7 +16,7 @@ pipeline {
      post {
         success {
          
-            emailext to: committerEmail, body:  '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:$BUILD_LOG maxLines=8000, escapeHtml=true', subject: 'SUCCESS: ${currentBuild.fullDisplayName}', recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+            emailext to: committerEmail, body:  '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:$BUILD_LOG maxLines=8000, escapeHtml=true', subject: 'SUCCESS: $jenkins-${JOB_NAME}-${BUILD_NUMBER}', recipientProviders: [[$class: 'DevelopersRecipientProvider']]
             
         }
 }
