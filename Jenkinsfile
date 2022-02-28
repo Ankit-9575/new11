@@ -16,7 +16,7 @@ pipeline {
      post {
         success {
          
-         emailext body: 'BUILD IS SUCCESS', subject: 'SUCCESS: ${currentBuild.fullDisplayName}', recipientProviders: [[$class: 'DevelopersRecipientProvider']], to: committerEmail
+            emailext body: ${BUILD_LOG}, subject: 'SUCCESS: ${currentBuild.fullDisplayName}', recipientProviders: [[$class: 'DevelopersRecipientProvider']], to: committerEmail
             
         }
 }
