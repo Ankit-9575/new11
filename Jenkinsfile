@@ -9,7 +9,7 @@ pipeline {
         stages {
         stage('git') {
             steps {
-            git branch: 'stage', url: 'https://github.com/Ankit-9575/new11.git'
+            git branch: 'test', url: 'https://github.com/Ankit-9575/new11.git'
         }
     }
     }
