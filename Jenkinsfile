@@ -10,6 +10,7 @@ pipeline {
         stage('git') {
             steps {
             git branch: 'test', url: 'https://github.com/Ankit-9575/new11.git'
+                sh 'echo "this is from test branch"'
         }
     }
     }
